@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>10 Things I Love About You</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand&display=swap');
+
+    body {
+      margin: 0;
+      /* New blue-purple gradient background */
+      background: linear-gradient(120deg, #6a11cb, #2575fc);
+      font-family: 'Quicksand', sans-serif;
+      text-align: center;
+      color: #e0d7ff;
+      padding: 50px 20px;
+    }
+
+    h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      margin-bottom: 30px;
+      animation: fadeIn 2s ease-in-out;
+      text-shadow: 0 2px 8px rgba(0,0,50,0.5);
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      max-width: 700px;
+      margin: auto;
+      animation: slideUp 1.2s ease;
+    }
+
+    .item {
+      background: rgba(255 255 255 / 0.15);
+      padding: 20px 30px;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      width: 90%;
+      font-size: 1.3em;
+      position: relative;
+      transition: transform 0.3s;
+      color: #f3eaff;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+
+    .item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+    }
+
+    .item::before {
+      content: "❤️";
+      position: absolute;
+      left: -10px;
+      top: -10px;
+      font-size: 1.5em;
+      text-shadow: 0 0 5px rgba(255, 0, 100, 0.7);
+    }
+
+    a {
+      margin-top: 50px;
+      display: inline-block;
+      background: #8b54ff;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: 0.3s ease;
+      box-shadow: 0 5px 15px rgba(139, 84, 255, 0.6);
+    }
+
+    a:hover {
+      background: #6c3bff;
+      box-shadow: 0 8px 20px rgba(108, 59, 255, 0.8);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h2>10 Things I Absolutely Love About You 💕</h2>
+
+  <div class="list">
+    <div class="item">1. Your smile — it lights up my entire world.</div>
+    <div class="item">2. Your laugh — it's the sweetest sound I know.</div>
+    <div class="item">3. The way you care — it’s rare and beautiful.</div>
+    <div class="item">4. Your eyes — I get lost in them every time.</div>
+    <div class="item">5. The way you say my name — it melts my heart.</div>
+    <div class="item">6. Your strength — even when you don’t see it.</div>
+    <div class="item">7. Your hugs — my favorite place to be.</div>
+    <div class="item">8. Your kindness — even in little things.</div>
+    <div class="item">9. The silly things you do — they make me fall more every day.</div>
+    <div class="item">10. Just... YOU — because you’re perfect to me.</div>
+  </div>
+
+  <a href="wish.html">Click for more 🎁</a>
+</body>
+</html>

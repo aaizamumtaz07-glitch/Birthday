@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Countdown to Your Special Day 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to top right, #a0c4ff, #bde0fe);
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+    }
+
+    #countdown {
+      display: flex;
+      gap: 20px;
+      font-size: 2em;
+      font-weight: bold;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .time-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      min-width: 80px;
+    }
+
+    .label {
+      font-size: 0.5em;
+      margin-top: 5px;
+      display: block;
+      color: #e0e0e0;
+    }
+
+    a#startBtn {
+      display: none;
+      margin-top: 40px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background-color: #3a86ff;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    a#startBtn:hover {
+      background-color: #265df2;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Counting Down to Your Special Day 🎉</h1>
+  <div id="countdown">
+    <div class="time-box">
+      <span id="days">00</span><span class="label">Days</span>
+    </div>
+    <div class="time-box">
+      <span id="hours">00</span><span class="label">Hours</span>
+    </div>
+    <div class="time-box">
+      <span id="minutes">00</span><span class="label">Minutes</span>
+    </div>
+    <div class="time-box">
+      <span id="seconds">00</span><span class="label">Seconds</span>
+    </div>
+  </div>
+
+  <a id="startBtn" href="index.html">Start the Surprise 💝</a>
+
+  <script>
+    // 🎯 SET YOUR TARGET BIRTHDAY DATE HERE
+    const targetDate = new Date("2025-08-24T00:00:00").getTime(); // Change this date!
+
+    const daysEl = document.getElementById("days");
+    const hoursEl = document.getElementById("hours");
+    const minutesEl = document.getElementById("minutes");
+    const secondsEl = document.getElementById("seconds");
+    const startBtn = document.getElementById("startBtn");
+
+    const countdownInterval = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        clearInterval(countdownInterval);
+        document.getElementById("countdown").style.display = "none";
+        startBtn.style.display = "inline-block";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      daysEl.textContent = String(days).padStart(2, '0');
+      hoursEl.textContent = String(hours).padStart(2, '0');
+      minutesEl.textContent = String(minutes).padStart(2, '0');
+      secondsEl.textContent = String(seconds).padStart(2, '0');
+    }, 1000);
+  </script>
+</body>
+</html>

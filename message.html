@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Message to You</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+    body {
+      margin: 0;
+      /* New blue dreamy gradient background */
+      background: linear-gradient(135deg, #a2cfff, #668cff, #3358ff);
+      font-family: 'Dancing Script', cursive;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      height: 100vh;
+      color: #e0eaff; /* light soft color for contrast */
+      overflow: hidden;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 3.5em;
+      animation: fadeIn 2s ease;
+      text-shadow: 1px 1px 5px rgba(0, 0, 50, 0.7);
+    }
+
+    p {
+      font-size: 1.8em;
+      margin: 20px;
+      max-width: 800px;
+      animation: slideIn 2s ease-in-out;
+      text-shadow: 0 0 10px rgba(0,0,70,0.3);
+      line-height: 1.4;
+    }
+
+    a {
+      margin-top: 30px;
+      background: #e1e9ff;
+      padding: 15px 35px;
+      border-radius: 30px;
+      color: #3358ff;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.2em;
+      transition: 0.3s;
+      animation: popIn 2s ease 1.5s forwards;
+      opacity: 0;
+      box-shadow: 0 5px 15px rgba(51, 88, 255, 0.4);
+    }
+
+    a:hover {
+      background-color: #c7d7ff;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes slideIn {
+      from {opacity: 0; transform: translateX(-100px);}
+      to {opacity: 1; transform: translateX(0);}
+    }
+
+    @keyframes popIn {
+      to {opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <h2>My Sweetheart 💖</h2>
+  <p>
+    On your birthday, I want you to know how special you are to me.<br />
+    Your smile melts my worries away, your laughter fills my soul with joy.<br />
+    You are not just the love of my life – you are my life.
+  </p>
+  <a href="memories.html">Some reasons that I love Umi</a>
+</body>
+</html>

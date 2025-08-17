@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday My Love</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to top right, #a0c4ff, #bde0fe);
+      color: white;
+      text-align: center;
+      font-family: 'Segoe UI', sans-serif;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+      padding-top: 20%;
+    }
+
+    h1 {
+      font-size: 3em;
+      animation: fadeIn 2s ease;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      animation: fadeIn 2s ease 0.5s forwards;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      background-color: #3a86ff;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 1.2em;
+      margin-top: 30px;
+      display: inline-block;
+      animation: fadeIn 2s ease 1s forwards;
+    }
+
+    a:hover {
+      background-color: #265df2;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    /* 🎈 Balloon Styles */
+    .balloon {
+      position: absolute;
+      width: 40px;
+      height: 50px;
+      background-color: #ffadad;
+      border-radius: 50% 50% 50% 50%;
+      animation: float 10s infinite ease-in;
+    }
+
+    .balloon::after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 30px;
+      background: white;
+      top: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-200px) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Happy Birthday, My Love Umair ❤️</h1>
+  <p>You are the sunshine that lights up my whole world.</p>
+  <a href="message.html">Click to Continue</a>
+
+  <!-- 🎈 Floating Balloons -->
+  <script>
+    const colors = ['#ffadad', '#ffd6a5', '#fdffb6', '#caffbf', '#a0c4ff', '#bdb2ff', '#ffc6ff'];
+    for (let i = 0; i < 15; i++) {
+      const balloon = document.createElement('div');
+      balloon.className = 'balloon';
+      balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      balloon.style.left = Math.random() * 100 + 'vw';
+      balloon.style.animationDuration = (8 + Math.random() * 4) + 's';
+      balloon.style.animationDelay = Math.random() * 5 + 's';
+      document.body.appendChild(balloon);
+    }
+  </script>
+
+</body>
+</html>
